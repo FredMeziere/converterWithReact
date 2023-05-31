@@ -1,27 +1,37 @@
-@use 'src/styles/vars';
+@use "src/styles/vars";
 
 .currencies {
-    background-color: vars.$color-light;
-    max-height: 250px;
-    overflow-y: auto;
+  background-color: vars.$color-light;
+  max-height: 250px;
+  overflow-y: auto;
 
+  &-title {
+    padding: vars.$gutter;
+    margin-top: vars.$gutter;
+    font-weight: bold;
+  }
 
-    &-title {
-        padding:  vars.$gutter;
-        margin-top: vars.$gutter;
-        font-weight: bold;
+  &-search {
+    padding: vars.$gutter;
+    margin-top: vars.$gutter;
+    width: 100%;
+    border: none;
+    color: vars.$color;
+    font: inherit;
+    &::placeholder {
+      color: vars.$color-alt;
+    }
+  }
 }
 
 .currency {
-    padding:  vars.$gutter;
-        border-top: 1px solis vars.$color-alt;
-        font-weight: 500;
-        cursor: pointer;
-        transition: baxkground-color 1s;
-        &:hover {
-            background-color:  vars.$color-alt;
-            transition-duration: vars.$transition-fast;
-        }
-
-    }
+  padding: vars.$gutter;
+  border-top: 1px solid vars.$color-alt;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 1s;
+  &:hover {
+    background-color: vars.$color-alt;
+    transition-duration: vars.$transition-fast;
+  }
 }

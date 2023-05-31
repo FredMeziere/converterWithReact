@@ -20,9 +20,7 @@ class Header extends Component {
 
 export default Header;
 
-// On défini les types des props
 Header.propTypes = {
-  // baseAmount est de type number et est requis (il doit être transmis par le composant parent)
   baseAmount: PropTypes.number.isRequired,
   onChangeAmount: PropTypes.func.isRequired,
 };
