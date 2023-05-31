@@ -12,10 +12,7 @@ class Currencies extends Component {
         <ul className="currencies-list">
           {
             currenciesList.map((currencyElement) => (
-              <Currency
-                key={currencyElement.name}
-                {...currencyElement}
-              />
+              <Currency key={currencyElement.name} {...currencyElement} />
             ))
           }
         </ul>

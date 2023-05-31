@@ -9,7 +9,7 @@ class Header extends Component {
     return (
       <div className="header">
         <h1 className="header-title">Converter</h1>
-        <p className="header-amount">{baseAmount}</p>
+        <p className="header-amount">{baseAmount} euro</p>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import './styles.scss';
 const Currency = ({
   name,
 }) => (
-  <li className="currency" key={name}>{name}</li>
+  <li className="currency">{name}</li>
 );
 
 export default Currency;
