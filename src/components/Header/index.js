@@ -4,12 +4,15 @@ import './styles.scss';
 
 class Header extends Component {
   render() {
-    const { baseAmount } = this.props;
+    const { baseAmount, onChangeAmount } = this.props;
 
     return (
       <div className="header">
         <h1 className="header-title">Converter</h1>
-        <p className="header-amount">{baseAmount} euro</p>
+        <p className="header-amount">
+          <input type="number" className="header-amount-value" value={baseAmount} onChange={(event) => onChangeAmount(event.target.value)} />
+          euro(s)
+        </p>
       </div>
     );
   }
@@ -17,6 +20,9 @@ class Header extends Component {
 
 export default Header;
 
+// On défini les types des props
 Header.propTypes = {
+  // baseAmount est de type number et est requis (il doit être transmis par le composant parent)
   baseAmount: PropTypes.number.isRequired,
+  onChangeAmount: PropTypes.func.isRequired,
 };
